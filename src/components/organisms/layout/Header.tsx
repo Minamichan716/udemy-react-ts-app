@@ -37,7 +37,7 @@ export const Header: FC = memo(() => {
           onClick={onClickHome}
         >
           <Heading as="h1" fontSize={{ base: "md", md: "lg" }}>
-            ユーザー管理アプリ
+            <Link href="/home">ユーザー管理アプリ</Link>
           </Heading>
         </Flex>
         <Flex
@@ -47,10 +47,10 @@ export const Header: FC = memo(() => {
           display={{ base: "none", md: "flex" }}
         >
           <Box pr={4}>
-            <Link onClick={onClickUserManagement}>ユーザー一覧</Link>
+            <Link href="/home/user_management">ユーザー一覧</Link>
           </Box>
           <Box>
-            <Link onClick={onClickSetting}>設定</Link>
+            <Link href="/home/setting">設定</Link>
           </Box>
         </Flex>
         <MenuIconButton onOpen={onOpen} />
